@@ -1,0 +1,235 @@
+﻿donor rank: 500
+deluxe donor rank: 2000
+sponsor rank: 8000
+super sponsor rank: 15000
+mystery box: 15
+mega mystery box: 350
+torva mystery box: 250
+pet mystery box: 750
+magma axe : 5000
+earth whip: 750
+water whip: 1000
+air whip: 1750
+american whip: 25
+oreo whip: 35
+sky whip: 85
+darth whip: 140
+cash whip: 160
+silver whip: 180
+camo whip: 400
+winter whip: 900
+bloodshot whip: 1750
+rainbow whip: 4000
+cryptic sword: 20000
+red vamp sword/def: 3
+silver vamp sword/def: 5
+gold vamp sword/def: 7
+skairu staff: 15000
+vortex crossbow: 1000
+american torva set: 145
+american torva full helm: 20
+american torva platebody: 20
+american torva platelegs: 20
+american torva boots: 20
+american torva gloves: 20
+american torva wings: 20
+oreo torva set: 205
+oreo torva full helm: 30
+oreo torva platebody: 30
+oreo torva platelegs: 30
+oreo torva boots: 30
+oreo torva gloves: 30
+oreo torva wings: 30
+sky torva set: 535
+sky torva full helm: 75
+sky torva platebody: 75
+sky torva platelegs: 75
+sky torva boots: 75
+sky torva gloves: 75
+sky torva wings: 75
+darth maul torva set: 740
+darth maul torva full helm: 100
+darth maul torva platebody: 100
+darth maul torva platelegs: 100
+darth maul torva boots: 100
+darth maul torva gloves: 100
+darth maul torva wings: 100
+cash torva set: 880
+cash torva full helm: 120
+cash torva platebody: 120
+cash torva platelegs: 120
+cash torva boots: 120
+cash torva gloves: 120
+cash torva wings: 120
+silver torva set: 1080
+silver torva full helm: 150
+silver torva platebody: 150
+silver torva platelegs: 150
+silver torva boots: 150
+silver torva gloves: 150
+silver torva wings: 150
+camo torva set: 2500
+camo torva full helm: 350
+camo torva platebody: 350
+camo torva platelegs: 350
+camo torva boots: 350
+camo torva gloves: 350
+camo torva wings: 350
+winter torva set: 3900
+winter torva full helm: 500
+winter torva platebody: 500
+winter torva platelegs: 500
+winter torva boots: 500
+winter torva gloves: 500
+winter torva wings: 500
+bloodshot torva set: 6600
+bloodshot torva full helm: 800
+bloodshot torva platebody: 800
+bloodshot torva platelegs: 800
+bloodshot torva boots: 800
+bloodshot torva gloves: 800
+bloodshot torva wings: 800
+rainbow torva set: 14500
+rainbow torva full helm: 1750
+rainbow torva platebody: 1750
+rainbow torva platelegs: 1750
+rainbow torva boots: 1750
+rainbow torva gloves: 1750
+rainbow torva wings: 1750
+cryptic set: 140000
+cryptic full helm: 20000
+cryptic platebody: 20000
+cryptic platelegs: 20000
+cryptic boots: 20000
+cryptic gloves: 20000
+cryptic wings: 20000
+burst set: 45000
+burst full helm: 15000
+burst platebody: 15000
+burst platelegs: 15000
+tyrant set: 150000
+tyrant full helm: 25000
+tyrant platebody: 25000
+tyrant platelegs: 25000
+tyrant boots: 25000
+tyrant gloves: 25000
+tyrant cape: 25000
+vortex set: 6000
+vortex cowl: 1000
+vortex body: 1000
+vortex chaps: 1000
+vortex vambraces: 1000
+vortex boots: 1000
+clobe set: 500
+clobe cowl: 100
+clobe body: 100
+clobe chaps: 100
+clobe vambraces: 100
+clobe boots: 100
+prostex set: 1000
+prostex cowl: 200
+prostex body: 200
+prostex chaps: 200
+prostex vambraces: 200
+prostex boots: 200
+redonex set: 1500
+redonex cowl: 300
+redonex body: 300
+redonex chaps: 300
+redonex vambraces: 300
+redonex boots: 300
+legion set: 2500
+legion cowl: 500
+legion body: 500
+legion chaps: 500
+legion vambraces: 500
+legion boots: 500
+zarthyx set: 3000
+zarthyx cowl: 600
+zarthyx body: 600
+zarthyx chaps: 600
+zarthyx vambraces: 600
+zarthyx boots: 600
+rucord set: 3750
+rucord cowl: 750
+rucord body: 750
+rucord chaps: 750
+rucord vambraces: 750
+rucord boots: 750
+drygore set: 3500
+drygore full helm: 500
+drygore platebody: 500
+drygore platelegs: 500
+drygore gloves: 500
+drygore boots: 500
+drygore wings: 500
+purgatory set: 40
+purgatory full helm: 5
+purgatory platebody: 5
+purgatory platelegs: 5
+purgatory boots: 5
+purgatory gloves: 5
+purgatory wings: 5
+magma shield: 3000
+zamorak wings: 25
+dragon slayer shield: 6
+silver chain: 500
+gold chain: 1000
+drop collector: 7500
+ring of riches: 800
+ring of wealth: 2000
+ring of power: 7500
+ring of defence: 7500
+red boxing gloves: 7500
+blue boxing gloves: 7500
+luigi bones: 0.02
+mewtwo bones: 0.02
+charmeleon bones: 0.05
+zarthyx bones: 0.05
+legion bones: 0.05
+american bones: 0.05
+oreo bones: 0.06
+sky bones: 0.07
+darth maul bones: 0.08
+cash bones: 0.09
+silver bones: 0.1
+camouflage bones: 0.5
+winter bones: 0.75
+bloodshot bones: 1
+boss bones: 2
+uzi: 200
+uzi (s): 250
+desert eagle: 500
+desert eagle (s): 600
+ak-47: 750
+ak-47 (g): 1000
+dragunov: 2000
+dragunov (s): 2500
+ray gun: 4000
+thunder gun: 8000
+american torva pet: 60
+oreo torva pet: 120
+sky torva pet: 160
+darth maul torva pet: 225
+cash torva pet: 260
+silver torva pet: 325
+camo torva pet: 375
+winter torva pet: 750
+bloodshot torva pet: 4000
+pink spirit shield: 100
+green spirit shield: 100
+lime spirit shield: 100
+purple spirit shield: 100
+deathly spirit shield: 100
+mystical spirit shield: 100
+lava party hat: 500
+striped party hat: 150
+striped santa hat: 150
+striped hween mask: 150
+rainbow hween mask: 500
+rainbow party hat: 500
+rainbow santa hat: 500
+camo party hat: 200
+camo hween mask: 200
+lime sled: 100
+sled: 100

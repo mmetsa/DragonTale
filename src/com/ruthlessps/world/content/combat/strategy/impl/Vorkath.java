@@ -1,0 +1,80 @@
+package com.ruthlessps.world.content.combat.strategy.impl;
+
+import com.ruthlessps.engine.task.Task;
+import com.ruthlessps.engine.task.TaskManager;
+import com.ruthlessps.model.Animation;
+import com.ruthlessps.model.Graphic;
+import com.ruthlessps.model.Locations;
+import com.ruthlessps.model.Projectile;
+import com.ruthlessps.util.Misc;
+import com.ruthlessps.world.content.combat.CombatContainer;
+import com.ruthlessps.world.content.combat.CombatType;
+import com.ruthlessps.world.content.combat.strategy.CombatStrategy;
+import com.ruthlessps.world.entity.impl.Character;
+import com.ruthlessps.world.entity.impl.npc.NPC;
+
+public class Vorkath implements CombatStrategy {
+
+	public static int getAnimation(int npc) {
+		int anim = 25;
+		return anim;
+	}
+
+	@Override
+	public CombatContainer attack(Character entity, Character victim) {
+		return null;
+	}
+
+	@Override
+	public int attackDelay(Character entity) {
+		return entity.getAttackSpeed();
+	}
+
+	@Override
+	public int attackDistance(Character entity) {
+		return 8;
+	}
+
+	@Override
+	public boolean canAttack(Character entity, Character victim) {
+		return true;
+	}
+
+	@Override
+	public boolean customContainerAttack(Character entity, Character victim) {
+		NPC dragon = (NPC) entity;
+		if (dragon.isChargingAttack() || dragon.getConstitution() <= 0) {
+			dragon.getCombatBuilder().setAttackTimer(4);
+			return true;
+		}
+			dragon.setChargingAttack(true);
+			dragon.performAnimation(new Animation(getAnimation(dragon.getId())));
+			dragon.getCombatBuilder()
+					.setContainer(new CombatContainer(dragon, victim, 1, 3, CombatType.DRAGON_FIRE, true));
+			TaskManager.submit(new Task(1, dragon, false) {
+				int tick = 0;
+
+				@Override
+				public void execute() {
+					/*
+					 * if(tick == 1 && dragon.getId() == 50) { new Projectile(dragon, victim, 393 +
+					 * Misc.getRandom(3), 44, 3, 43, 43, 0).sendProjectile(); } else
+					 */
+					if (tick == 2) {
+						new Projectile(dragon, victim, 395, 44, 3, 43, 43, 0).sendProjectile();
+						victim.performGraphic(new Graphic(363));
+					} else if (tick == 3) {
+						dragon.setChargingAttack(false).getCombatBuilder().setAttackTimer(6);
+						stop();
+					}
+					tick++;
+				}
+			});
+		return true;
+	}
+
+	@Override
+	public CombatType getCombatType() {
+		return CombatType.MIXED;
+	}
+}

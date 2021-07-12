@@ -1,0 +1,9 @@
+*
+!.gitignore
+!characters/
+!clans/
+!def/
+!farming/
+!GE/
+!logs/
+!lottery/
