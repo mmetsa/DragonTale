@@ -215,6 +215,8 @@ public class Lottery {
 	 */
 	public static void init() {
 		try {
+			File starterFile = new File(CONTESTERS_FILE_LOCATION.getAbsolutePath());
+			starterFile.createNewFile();
 			BufferedReader r = new BufferedReader(new FileReader(CONTESTERS_FILE_LOCATION));
 			while (true) {
 				String line = r.readLine();
@@ -233,6 +235,7 @@ public class Lottery {
 			}
 			r.close();
 
+			LAST_WINNER_FILE_LOCATION.createNewFile();
 			BufferedReader r2 = new BufferedReader(new FileReader(LAST_WINNER_FILE_LOCATION));
 			while (true) {
 				String line = r2.readLine();
@@ -281,6 +284,7 @@ public class Lottery {
 			if (winner != null) {
 				LAST_WINNER = winner;
 				Player player = World.getPlayerByName(winner);
+				LAST_WINNER_FILE_LOCATION.createNewFile();
 				BufferedWriter writer = new BufferedWriter(new FileWriter(LAST_WINNER_FILE_LOCATION));
 				writer.write(winner);
 				writer.newLine();
@@ -322,6 +326,7 @@ public class Lottery {
 			player.getPacketSender().sendString(8135, "" + player.getMoneyInPouch());
 			player.getPacketSender().sendMessage("You've won the lottery for this week! Congratulations!");
 			player.getPacketSender().sendMessage("The reward has been added to your money pouch.");
+			LAST_WINNER_FILE_LOCATION.createNewFile();
 			BufferedWriter writer = new BufferedWriter(new FileWriter(LAST_WINNER_FILE_LOCATION));
 			writer.write(player.getUsername());
 			writer.close();

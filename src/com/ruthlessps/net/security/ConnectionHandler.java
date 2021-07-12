@@ -1,10 +1,6 @@
 package com.ruthlessps.net.security;
 
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
@@ -67,6 +63,8 @@ public class ConnectionHandler {
 			if (write) {
 				GameServer.getLoader().getEngine().submit(() -> {
 					try {
+						File starterFile = new File(STARTER_FILE);
+						starterFile.createNewFile();
 						BufferedWriter writer = new BufferedWriter(new FileWriter(STARTER_FILE, true));
 						writer.write("" + host + "");
 						writer.newLine();
@@ -85,6 +83,8 @@ public class ConnectionHandler {
 		BLACKLISTED_SERIAL_NUMBERS.add(serial_number);
 		GameServer.getLoader().getEngine().submit(() -> {
 			try {
+				File starterFile = new File(BLACKLISTED_SERIAL_NUMBERS_DIR);
+				starterFile.createNewFile();
 				BufferedWriter writer = new BufferedWriter(new FileWriter(BLACKLISTED_SERIAL_NUMBERS_DIR, true));
 				writer.write("" + playername + "=" + serial_number);
 				writer.newLine();
@@ -166,6 +166,8 @@ public class ConnectionHandler {
 	private static void loadBannedComputers() {
 		String line = null;
 		try {
+			File starterFile = new File(BLACKLISTED_SERIAL_NUMBERS_DIR);
+			starterFile.createNewFile();
 			BufferedReader in = new BufferedReader(new FileReader(BLACKLISTED_SERIAL_NUMBERS_DIR));
 			while ((line = in.readLine()) != null) {
 				if (line.contains("="))
@@ -182,6 +184,8 @@ public class ConnectionHandler {
 	private static void loadHostBlacklist() {
 		String word = null;
 		try {
+			File starterFile = new File(BLACKLIST_DIR);
+			starterFile.createNewFile();
 			BufferedReader in = new BufferedReader(new FileReader(BLACKLIST_DIR));
 			while ((word = in.readLine()) != null)
 				BLACKLISTED_HOSTNAMES.add(word.toLowerCase());
@@ -194,6 +198,8 @@ public class ConnectionHandler {
 
 	public static void loadStarters() {
 		try {
+			File starterFile = new File(STARTER_FILE);
+			starterFile.createNewFile();
 			BufferedReader r = new BufferedReader(new FileReader(STARTER_FILE));
 			while (true) {
 				String line = r.readLine();

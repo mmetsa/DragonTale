@@ -111,6 +111,9 @@ public class TopList {
 					File[] directoryListing = dir.listFiles();
 					if (directoryListing != null) {
 					    for (File child : directoryListing) {
+					    	if (child.getName().endsWith(".gitignore")) {
+					    		continue;
+							}
 					    	try {
 								fr = new FileReader(child);
 								br = new BufferedReader(fr);

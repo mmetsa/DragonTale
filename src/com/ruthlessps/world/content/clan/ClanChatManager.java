@@ -381,7 +381,7 @@ public class ClanChatManager {
 	public static void init() {
 		try {
 			for (File file : (new File(FILE_DIRECTORY)).listFiles()) {
-				if (!file.exists())
+				if (!file.exists() || file.getName().endsWith(".gitignore"))
 					continue;
 				DataInputStream input = new DataInputStream(new FileInputStream(file));
 				if (input.available() < 6)
