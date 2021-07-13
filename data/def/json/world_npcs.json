@@ -24525,13 +24525,7 @@
 		}
 	},
 	{
-	"npc-id": 4662,
-		"face": WEST,
-		"position": {
-			"x": 3239,
-			"y": 9497,
-			"z": 0
-		},
+
 		"walking-policy": {
 			"coordinate": false,
 			"radius": -1

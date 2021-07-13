@@ -80,7 +80,7 @@ public class Achievements {
 
 		
 		
-			
+
 		COMPLETE_ALL_EASY(Difficulty.MEDIUM, "Compelete all easy tasks", new int[] { 62, 33 }, new String[]{"A cape with +1000 prayer bonus"}),
 		
 		GET_99_PRAYER(Difficulty.MEDIUM, "Get 99 Prayer", null),
