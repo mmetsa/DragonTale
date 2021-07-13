@@ -136,25 +136,34 @@ public class TeleportManager {
 		
 		TRAINING_ZONE(-16432, -13921, new Position(3305, 4975, 0)),
 		PENGUIN_ZONE(-16428, -13921, new Position(3103, 9491, 0)),
+
 		POINTZONE(23037, -13921, new Position(1952, 5027, 0)),
 		MYSTERY_BOX_ZONE(23056, -13921, new Position(1886, 5473, 0)),
 		MONEY_BOX_ZONE(23094, -13921, new Position(2655, 10015, 0)),
 		MINECRAFT_ZONE(23075, -13921, new Position(2354, 4981, 0)),
 		CAMO_WARS(-16408, -13917, new Position(2540, 5785, 0)),
-		LEFOSH(-16024, -13729, new Position(2721, 4905, 0)),
-		IKTOMI(-16020, -13725, new Position(2642, 4917, 2)),
-		ZIVA(-16008, -13321, new Position(3417, 2983, 0)),
-		VORAGO(-16004, -13721, new Position(2785, 10024, 0)),
-		VORTEX(-16016, -13725, new Position(2833, 9563, 0)),
-		ZEUS(-16012, -13725, new Position(3813, 3562, 0)),
-		WARLORD(-16032, -13321, new Position(3422, 9621, 0)),
-		ZULRAH(-16028, -13321, new Position(2793, 3321, 0)),
+		LEFOSH(-16404, -13729, new Position(2721, 4905, 0)),
+		IKTOMI(-16400, -13725, new Position(2642, 4917, 2)),
+		ZIVA(-16396, -13321, new Position(3417, 2983, 0)),
+		VORAGO(-16392, -13721, new Position(2785, 10024, 0)),
+		//VORTEX(-16432, -13725, new Position(2833, 9563, 0)),
+		//ZEUS(-16428, -13725, new Position(3813, 3562, 0)),
+		WARLORD(-16424, -13321, new Position(3422, 9621, 0)),
+		ZULRAH(-16420, -13321, new Position(2793, 3321, 0)),
 		GOD_WARS(-16416, -13725, new Position(2666, 3997, 1)),
 		DONOR_CAMO_WARS(-16412, -13421, new Position(2340, 4739, 0)),
 		DUEL_ARENA(-16132, -13629, new Position(3364, 3267, 0)),
 		HUNGER_GAMES(-16128, -13625, new Position(2442, 3090, 0)),
 		FUN_PK(-16120, -13625, new Position(1837, 5087, 2)),
 		ZOMBIES(-16124, -13621, new Position(3504, 3565, 0)),
+		CHAOS_TEMPLE(-16032, -13529, new Position(3239, 3619, 0)),
+		EDGEVILLE_DITCH_1V1(-16028, -13525, new Position(3087, 3510, 0)),
+		VARROCK_DITCH_MULTI(-16024, -13521, new Position(3246, 3501, 0)),
+		WILDERNESS_CASTLE(-16020, -13517, new Position(3005, 3631, 0)),
+		ROGUES_CASTLE(-16016, -13517, new Position(3307, 3916, 0)),
+		BONE_YARD(-16012, -13517, new Position(3221, 3752, 0)),
+		SPIDER_HILL(-16008, -13517, new Position(3146, 3872, 0)),
+		GRAVEYARD(-16004, -13517, new Position(3178, 3683, 0)),
 		DONOR_ZONE(-15932, -13429, new Position(2022, 4755, 0)),
 		DELUXE_DONOR_ZONE(-15928, -13425, new Position(2319, 9624, 0)),
 		SPONSOR_ZONE(-15924, -13421, new Position(3216, 3117, 0)),
@@ -297,25 +306,25 @@ public class TeleportManager {
 		for (Teleport teleport : Teleport.values()) {
 			if (teleport.getButton() == button) {
 				switch (teleport) {
-//				case CHAOS_TEMPLE:
-//				case WILDERNESS_CASTLE:
-//				case SPIDER_HILL:
-//				case GRAVEYARD:
-//				case BONE_YARD:
-//				case ROGUES_CASTLE:
-//					if(player.getAttributes().getPet().getId() != 0) {
-//						player.getPacketSender().sendMessage("<img=10><col=FF0000><shad=0>Please dismiss your familiar first");
-//						return false;
-//					}
-//					if (player.getInventory().containsAny(GameSettings.BANNEDWILD_ITEMS)) {
-//						player.sendMessage("<img=10><col=FF0000><shad=0>You have items that are not allowed in the wilderness.");
-//					} else if (player.getEquipment().containsAny(GameSettings.BANNEDWILD_ITEMS)) {
-//						player.sendMessage("<img=10><col=FF0000><shad=0>You're wearing an item that is now allowed in the wilderness.");
-//					} else {
-//						player.getPacketSender().sendInterface(35_000);
-//						player.setTeleportType(teleport);
-//					}
-//					return true;
+				case CHAOS_TEMPLE:
+				case WILDERNESS_CASTLE:
+				case SPIDER_HILL:
+				case GRAVEYARD:
+				case BONE_YARD:
+				case ROGUES_CASTLE:
+					if(player.getAttributes().getPet().getId() != 0) {
+						player.getPacketSender().sendMessage("<img=10><col=FF0000><shad=0>Please dismiss your familiar first");
+						return false;
+					}
+					if (player.getInventory().containsAny(GameSettings.BANNEDWILD_ITEMS)) {
+						player.sendMessage("<img=10><col=FF0000><shad=0>You have items that are not allowed in the wilderness.");
+					} else if (player.getEquipment().containsAny(GameSettings.BANNEDWILD_ITEMS)) {
+						player.sendMessage("<img=10><col=FF0000><shad=0>You're wearing an item that is now allowed in the wilderness.");
+					} else {
+						player.getPacketSender().sendInterface(35_000);
+						player.setTeleportType(teleport);
+					}
+					return true;
 					case POINTZONE:
 						if(!player.getZoneTaskAttributes().getTwoOfThreeCompletion(0)) {
 							player.getPA().sendMessage("You need 2/3 of The first zone completed to Teleport to Pointzone!");
